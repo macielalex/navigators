@@ -4,7 +4,8 @@ import { View, Text, Button } from 'react-native'
 
 export default props => (
     <View style={{ flex: 1 }}>
-        <View style={{flexDirection: 'row', justifyContent:'space-around'}}>
+        <View style={{flexDirection: 'row', 
+        justifyContent:'space-around'}}>
 
             
             {props.voltar
@@ -21,7 +22,9 @@ export default props => (
                 ? <Button
                     title='Avançar'
                     onPress={() => {
-                        props.navigation.navigate(props.avancar)
+                        props.navigation.push(props.avancar ,
+                            props.avancarParams
+                            )
                     }}
                 />
                 : false
